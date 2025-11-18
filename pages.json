@@ -1,0 +1,195 @@
+{
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [
+    {
+      "path": "pages/login/landing_page",
+      "style": {
+        "navigationBarTitleText": "index",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "quotes"
+      }
+    },
+    {
+      "path": "pages/trade/trade",
+      "style": {
+        "navigationBarTitleText": "trade",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/account/account",
+      "style": {
+        "navigationBarTitleText": "account",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "mine",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "login",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/login/reg",
+      "style": {
+        "navigationBarTitleText": "register",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/verified",
+      "style": {
+        "navigationBarTitleText": "identification",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/set_account",
+      "style": {
+        "navigationBarTitleText": "safe",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/pwd_login",
+      "style": {
+        "navigationBarTitleText": "passwordSetting",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/pwd_pay",
+      "style": {
+        "navigationBarTitleText": "passwordSetting",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/msg_view",
+      "style": {
+        "navigationBarTitleText": "about",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/recharge_record",
+      "style": {
+        "navigationBarTitleText": "recharge",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/recharge",
+      "style": {
+        "navigationBarTitleText": "recharge",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/cash",
+      "style": {
+        "navigationBarTitleText": "withdraw",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/cash_record",
+      "style": {
+        "navigationBarTitleText": "withdraw",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/history_entrust",
+      "style": {
+        "navigationBarTitleText": "history",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/bill",
+      "style": {
+        "navigationBarTitleText": "bill",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/help",
+      "style": {
+        "navigationBarTitleText": "help",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/add_bank_card",
+      "style": {
+        "navigationBarTitleText": "add",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/mine/bank_card_list",
+      "style": {
+        "navigationBarTitleText": "list",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#edd33a",
+    "borderStyle": "#111",
+    "backgroundColor": "#21212b",
+    "iconWidth": "40rpx",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/hq11.png",
+        "selectedIconPath": "static/tabbar/hq12.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/trade/trade",
+        "iconPath": "static/tabbar/jy11.png",
+        "selectedIconPath": "static/tabbar/jy12.png",
+        "text": "交易"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "static/tabbar/wa11.png",
+        "selectedIconPath": "static/tabbar/wa12.png",
+        "text": "账户"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/tabbar/my11.png",
+        "selectedIconPath": "static/tabbar/my12.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "加载中",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#F8F8F8",
+    "titleNView": false,
+    "locale": "zh-Hans"
+  },
+  "uniIdRouter": {}
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.8-beta.4",
+    "uview-ui": "^2.0.31",
+    "vant": "^4.0.2",
+    "vue-i18n": "^9.2.2"
+  }
+}
