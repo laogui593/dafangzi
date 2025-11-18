@@ -1,13 +1,13 @@
 <template>
   <view>
     <view class="account">
-      <view class="account-title">{{$t('language.account.my_account')}}</view>
+      <view class="account-title">我的账户</view>
       <view class="account-head">
         <view class="top">
           <view class="top-left">
-            <view class="t11">{{$t('language.account.Total_assets')}} CNH</view>
+            <view class="t11">总资产 CNH</view>
             <text class="t22">{{ account.wait_money }}</text>
-            <text class="refresh">{{$t('language.account.to_refresh')}}</text>
+            <text class="refresh">刷新</text>
           </view>
           <view class="top-right mimi" @click="isShow = !isShow">
             <image src="/static/images/icon_eye.png" mode="widthFix"></image>
@@ -15,17 +15,17 @@
         </view>
         <view class="down">
           <view class="it">
-            <h5 class="h5">{{$t('language.account.profit_and_loss')}}</h5>
+            <h5 class="h5">盈亏</h5>
             <h6 class="a h6" v-if="isShow">{{ account.yingkui }}</h6>
             <h6 class="b h6" v-else>*****</h6>
           </view>
           <view class="it">
-            <h5 class="h5">{{$t('language.account.Position_amount')}}</h5>
+            <h5 class="h5">持仓金额</h5>
             <h6 class="a h6" v-if="isShow">{{ account.chicang }}</h6>
             <h6 class="b h6" v-else>*****</h6>
           </view>
           <view class="it" v-if="account.user">
-            <h5 class="h5">{{$t('language.account.Available_funds')}}</h5>
+            <h5 class="h5">可用资金</h5>
             <h6 class="a h6" v-if="isShow">{{ account.user.money }}</h6>
             <h6 class="b h6" v-else>*****</h6>
           </view>
@@ -36,37 +36,37 @@
           <view class="li left">
             <navigator url="/pages/mine/recharge_record" class="navtor">
               <image src="/static/images/ch6.png" mode="widthFix"></image>
-              <text>{{$t('language.account.Recharge_record')}}</text>
+              <text>充值记录</text>
             </navigator>
           </view>
           <view class="li center">
             <view class="navtor" @click="openKF(KF)">
               <image src="/static/images/ch5.png" mode="widthFix"></image>
-              <text>{{$t('language.account.recharge')}}</text>
+              <text>充值</text>
             </view>
           </view>
           <view class="li center">
             <navigator url="/pages/mine/cash" class="navtor">
               <image src="/static/images/ch4.png" mode="widthFix"></image>
-              <text>{{$t('language.account.withdraw')}}</text>
+              <text>提现</text>
             </navigator>
           </view>
           <view class="li right">
             <navigator url="/pages/mine/cash_record" class="navtor">
               <image src="/static/images/ch4.png" mode="widthFix"></image>
-              <text>{{$t('language.account.Withdrawals_record')}}</text>
+              <text>提现记录</text>
             </navigator>
           </view>
           <view class="li left">
             <navigator url="/pages/mine/history_entrust" class="navtor">
               <image src="/static/images/ch3.png" mode="widthFix"></image>
-              <text>{{$t('language.account.history')}}</text>
+              <text>历史委托</text>
             </navigator>
           </view>
           <view class="li center">
             <navigator url="" class="navtor" @click="openKF(KF)">
               <image src="/static/images/ch1.png" mode="widthFix"></image>
-              <text>{{$t('language.account.customer_service')}}</text>
+              <text>客服</text>
             </navigator>
           </view>
         </view>
@@ -103,15 +103,15 @@
                   <text class="ng-binding">{{ item.ptitle }}</text>
                   <text class="ng-binding in_money" v-if="item.ostyle == 0">
                     <i class="buytop"></i>
-                    {{$t('language.account.buy_up')}}（￥{{ item.fee }}）
+                    买涨（￥{{ item.fee }}）
                   </text>
                   <text class="ng-binding out_money" v-if="item.ostyle == 1">
                     <i class="buydown"></i>
-                    {{$t('language.account.buy_short')}}（￥{{ item.fee }}）
+                    买跌（￥{{ item.fee }}）
                   </text>
                   <text class="ng-binding out_money" v-if="item.ostyle == 3">
                     <i class="buydown"></i>
-                    {{$t('language.account.commissioned_to_buy')}}（￥{{ item.fee }}）
+                    委托买货（￥{{ item.fee }}）
                   </text>
                 </view>
                 <view class="ng-binding s2">
@@ -182,15 +182,15 @@
                   </text> -->
                   <text class="ng-binding in_money" v-if="item.ostyle == 0">
                     <i class="buytop"></i>
-                    {{$t('language.account.buy_up')}}（￥{{ item.fee }}）
+                    买涨（￥{{ item.fee }}）
                   </text>
                   <text class="ng-binding out_money" v-if="item.ostyle == 1">
                     <i class="buydown"></i>
-                    {{$t('language.account.buy_short')}}（￥{{ item.fee }}）
+                    买跌（￥{{ item.fee }}）
                   </text>
                   <text class="ng-binding out_money" v-if="item.ostyle == 3">
                     <i class="buydown"></i>
-                    {{$t('language.account.commissioned_to_buy')}}（￥{{ item.fee }}）
+                    委托买货（￥{{ item.fee }}）
                   </text>
                 </view>
                 <view class="ng-binding s2">

@@ -11,8 +11,8 @@
         </view>
         <view @click="openKF(KF)"
               class="text-cz">
-          <view class="luick-recharge">{{$t('language.home.Quick_recharge')}}</view>
-          <view style="color:#828095">{{$t('language.home.Transfer_option')}}</view>
+          <view class="luick-recharge">快捷充值</view>
+          <view style="color:#828095">转账方式</view>
         </view>
         <view @click="openKF(KF)"
               class="">

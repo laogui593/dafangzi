@@ -55,13 +55,13 @@
     </view>
     <view class="high-low m-flex text-center">
       <view class="m-flex-1"
-        >{{$t('language.trade.Highest')}}<text class="rise">{{ prodata_info.highest || 0 }}</text
+        >最高价<text class="rise">{{ prodata_info.highest || 0 }}</text
         ><text class="" style="margin-left: 40px; color: #26a848">{{
           (random.itemMax || 0).toFixed(2)
         }}</text></view
       >
       <view class="m-flex-1"
-        >{{$t('language.trade.lowest')}}<text class="fall">{{ prodata_info.lowest || 0 }}</text
+        >最低价<text class="fall">{{ prodata_info.lowest || 0 }}</text
         ><text class="" style="margin-left: 40px; color: #e45360">{{
           (random.itemMin || 0).toFixed(2)
         }}</text></view
@@ -100,13 +100,13 @@
       <u-button
         @click="buyTap(0)"
         type=""
-        :text="this.$t('language.trade.buy_up')"
+        text="买涨"
         style="background-color: #e45360; flex: 1; margin-right: 10px;"
       ></u-button>
       <u-button
         @click="buyTap(1)"
         type=""
-        :text="this.$t('language.trade.buy_short')"
+        text="买跌"
         style="background-color: #0ecb80; flex: 1;"
       ></u-button>
     </view>
@@ -139,35 +139,35 @@
     ></order-time>
     <!-- <view class="conet-item" style="margin-top: -100px">
       <view class="conet-item-ot">
-        <text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.product')}}</text>
+        <text style="color: #9a98ad; margin-right: auto">产品</text>
         <text style="margin-right: 20rpx">{{ page_title }}</text>
       </view>
       <view class="conet-item-ot"
-        ><text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.lowest')}}</text
+        ><text style="color: #9a98ad; margin-right: auto">最低价</text
         ><text style="margin-right: 20rpx">{{
           prodata_info.lowest || 0
         }}</text></view
       >
       <view class="conet-item-ot"
         >
-		<text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.turnover')}}</text>
+		<text style="color: #9a98ad; margin-right: auto">成交量</text>
 		<text style="margin-right: 20rpx">{{(prodata_info.now * randomNum || 0).toFixed(2)}}</text>
 		</view
       >
     </view>
     <view class="conet-item">
       <view class="conet-item-ot">
-        <text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.Highest')}}</text>
+        <text style="color: #9a98ad; margin-right: auto">最高价</text>
         <text style="margin-right: 20rpx">{{ prodata_info.highest || 0 }}</text>
       </view>
       <view class="conet-item-ot"
-        ><text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.open_today')}}</text
+        ><text style="color: #9a98ad; margin-right: auto">今开</text
         ><text style="margin-right: 20rpx">{{
           prodata_info.open || 0
         }}</text></view
       >
       <view class="conet-item-ot"
-        ><text style="color: #9a98ad; margin-right: auto">{{$t('language.trade.position')}}</text
+        ><text style="color: #9a98ad; margin-right: auto">持仓</text
         ><text style="margin-right: 20rpx">{{
           (prodata_info.open * randomNum || 0).toFixed(2)
         }}</text></view
@@ -217,10 +217,10 @@ export default {
       klineType: {
         list: [
           {
-            name: this.$t('language.trade.K_line'),
+            name: 'K线',
           },
           {
-            name: this.$t('language.trade.fluctuation'),
+            name: '分时',
           },
         ],
         active: 0,
@@ -228,27 +228,27 @@ export default {
       timeList: {
         list: [
           // {
-          //   name: this.$t('language.trade.o_minutes'),
+          //   name: '1分钟',
           //   value: 1,
           // },
           {
-            name: this.$t('language.trade.f_minutes'),
+            name: '5分钟',
             value: 5,
           },
           {
-            name: this.$t('language.trade.ft_minutes'),
+            name: '15分钟',
             value: 15,
           },
           {
-            name: this.$t('language.trade.tt_minutes'),
+            name: '30分钟',
             value: 30,
           },
           {
-            name: this.$t('language.trade.o_hour'),
+            name: '1小时',
             value: 60,
           },
           {
-            name: this.$t('language.trade.o_day'),
+            name: '1天',
             value: "d",
           },
         ],

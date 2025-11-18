@@ -1,36 +1,36 @@
 <template>
 	<view>
-		<u-navbar :title="this.$t('language.add_bank.add_bank_card')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="添加银行卡" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="f_content">
 			<view class="ul">
 				<view class="li">
-					<label>{{$t('language.add_bank.name')}}</label>
+					<label>姓名</label>
 					<view class="input-box">
-						<input type="text" v-model="form.name" :placeholder="this.$t('language.add_bank.enter_name')" />
+						<input type="text" v-model="form.name" placeholder="请输入姓名" />
 					</view>
 				</view>
 				<view class="li">
-					<label>{{$t('language.add_bank.Bank_name')}}</label>
+					<label>银行名称</label>
 					<view class="input-box">
-						<input type="text" v-model="form.bank" :placeholder="this.$t('language.add_bank.Enter_bank_name')" />
+						<input type="text" v-model="form.bank" placeholder="请输入银行名称" />
 					</view>
 				</view>
 				<view class="li">
-					<label>{{$t('language.add_bank.bank')}}</label>
+					<label>开户行</label>
 					<view class="input-box">
-						<input type="text" v-model="form.area" :placeholder="this.$t('language.add_bank.Enter_bank')" />
+						<input type="text" v-model="form.area" placeholder="请输入开户行" />
 					</view>
 				</view>
 				<view class="li">
-					<label>{{$t('language.add_bank.Bank_card_number')}}</label>
+					<label>银行卡号</label>
 					<view class="input-box">
-						<input type="text" v-model="form.account" oncut="return false" onpaste="return false" oncopy="return false" :placeholder="this.$t('language.add_bank.Enter_bank_card_number')" />
+						<input type="text" v-model="form.account" oncut="return false" onpaste="return false" oncopy="return false" placeholder="请输入银行卡号" />
 					</view>
 				</view>
 			</view>
 			<view class="sure">
-				<button @click="postAddCard">{{$t('language.add_bank.sure')}}</button>
+				<button @click="postAddCard">确定</button>
 			</view>
 		</view>
 	</view>

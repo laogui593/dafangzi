@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.history.title')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="历史委托" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="accound-tabs">
 			<u-tabs :list="tabsList" @click="tabsChange" lineWidth="0" :activeStyle="{ color: '#fff' }"
@@ -16,15 +16,15 @@
 								<text class="ng-binding">{{item.ptitle}}</text>
 								<text class="ng-binding in_money" v-if="item.ploss > 0">
 									<i class="buytop"></i>
-									{{$t('language.history.buy_u')}}（{{$t('language.order_time.symbol')}}{{item.fee}}）
+									买涨（¥{{item.fee}}）
 								</text>
 								<text class="ng-binding out_money" v-if="item.ploss < 0">
 									<i class="buydown"></i>
-									{{$t('language.history.buy_d')}}（{{$t('language.order_time.symbol')}}{{item.fee}}）
+									买跌（¥{{item.fee}}）
 								</text>
 								<text class="ng-binding" v-if="item.ploss == 0">
 									<i class="buydown"></i>
-									{{$t('language.history.buy_d')}}（{{$t('language.order_time.symbol')}}{{item.fee}}）
+									买跌（¥{{item.fee}}）
 								</text>
 							</view>
 							<view class="ng-binding s2">
@@ -54,17 +54,17 @@
 	} from '@/config/api.js'
 	export default {
 		data() {
-			return {
-				isShow: true,
-				tabsList: [{
-						id: 0,
-						name: this.$t('language.history.detial_ha')
-					},
-					{
-						id: 1,
-						name: this.$t('language.history.detial_hi')
-					}
-				],
+				return {
+					isShow: true,
+					tabsList: [{
+							id: 0,
+							name: "历史委托"
+						},
+						{
+							id: 1,
+							name: "历史记录"
+						}
+					],
 				scrollTop: 0,
 				orderList: [],
 				form: {

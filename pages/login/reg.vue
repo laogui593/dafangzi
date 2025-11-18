@@ -2,39 +2,39 @@
 	<view class="content">
 		<view class="sgin-in">
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.account')}}</label>
-				<input type="text" v-model="form.phone" :placeholder="this.$t('language.register.account_empty')" />
+				<label class="input-title">账号</label>
+				<input type="text" v-model="form.phone" placeholder="请输入账号" />
 			</view>
 			<view class="m-flex input-box">
 				<label class="input-title">姓名</label>
 				<input type="text" v-model="form.name" placeholder="请输入真实姓名" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.login_password')}}</label>
-				<input type="text" v-model="form.password" :placeholder="this.$t('language.register.login_password_empty')" />
+				<label class="input-title">登录密码</label>
+				<input type="text" v-model="form.password" placeholder="请输入登录密码" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.Confirm_login')}}</label>
-				<input type="text" v-model="form.password2" :placeholder="this.$t('language.register.login_again')" />
+				<label class="input-title">确认登录密码</label>
+				<input type="text" v-model="form.password2" placeholder="请再次输入登录密码" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.payment_password')}}</label>
-				<input type="text" v-model="form.password3" :placeholder="this.$t('language.register.Payment_password_is_empty')" />
+				<label class="input-title">支付密码</label>
+				<input type="text" v-model="form.password3" placeholder="请输入支付密码" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.confirm_payment')}}</label>
-				<input type="text" v-model="form.password4" :placeholder="this.$t('language.register.re_enter')" />
+				<label class="input-title">确认支付密码</label>
+				<input type="text" v-model="form.password4" placeholder="请再次输入支付密码" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.register.referral_code')}}</label>
-				<input type="text" v-model="form.top" :placeholder="this.$t('language.register.Recommended_ID')" />
+				<label class="input-title">推荐码</label>
+				<input type="text" v-model="form.top" placeholder="请输入推荐码(选填)" />
 			</view>
 			<view class="btn">
-				<button @click="sginUp">{{$t('language.register.register_log_in')}}</button>
+				<button @click="sginUp">注册</button>
 			</view>
 			<view class="reg">
-				<text>{{$t('language.register.Already_have_an_account')}}{{' '}}</text>
-				<text class="color-yellow" @click="goLogin">{{$t('language.register.Direct_Login')}}</text>
+				<text>已有账号?</text>
+				<text class="color-yellow" @click="goLogin">直接登录</text>
 			</view>
 		</view>
 	</view>

@@ -28,16 +28,16 @@
 						<text>{{ cashInfo.txsxf || 0 }}%</text>
 						</view>
 					<view class="two3">
-						<text>{{$t('language.withdraw.low_mon')}}</text>
-						<text class="color-yellow">{{$t('language.order_time.symbol')}}{{ cashInfo.cash_min || 100 }}</text>
+						<text>最低提现金额</text>
+						<text class="color-yellow">￥{{ cashInfo.cash_min || 100 }}</text>
 					</view>
 					</view>
 					<view class="item three">
-						<label for="paswd">{{$t('language.withdraw.pwd')}}</label>
-						<input type="password" id="paswd" v-model="form.pwd" :placeholder="$t('language.withdraw.pwc_in')">
+						<label for="paswd">支付密码</label>
+						<input type="password" id="paswd" v-model="form.pwd" placeholder="请输入支付密码">
 					</view>
 					<view class="item three" v-if="user.idcard">
-						<label for="paswd">{{$t('language.withdraw.card_id')}}</label>
+						<label for="paswd">选择银行卡</label>
 						<ep-select label_key="banks" value_key="account" filterable keep-input v-model="select"
 							:options="bankOptions" @change="change">
 						</ep-select>
@@ -45,13 +45,13 @@
 					</view>
 					<view class="model-row" style="margin-top: 30rpx;">
 						<u-button @click="postCashs" color="#edd33a" :customStyle="{color:'#000',fontSize:'32rpx'}"
-							:text="$t('language.withdraw.btn')"></u-button>
+							text="确认提现"></u-button>
 					</view>
 					<view class="model cash-hint">
-						{{$t('language.withdraw.tip')}}:
-						<view>1.{{$t('language.withdraw.lim')}}：{{cashInfo.cash_min}}-{{cashInfo.cash_max}}</view>
-						<view class="red">2.{{$t('language.withdraw.time')}}：{{cashInfo.cash_start}}-{{cashInfo.cash_end}}</view>
-						<view>3.{{$t('language.withdraw.forget')}}<text class="red">{{$t('language.withdraw.getPwd')}}</text></view>
+						温馨提示:
+						<view>1.提现限额：{{cashInfo.cash_min}}-{{cashInfo.cash_max}}</view>
+						<view class="red">2.提现时间：{{cashInfo.cash_start}}-{{cashInfo.cash_end}}</view>
+						<view>3.忘记密码<text class="red">请联系客服</text></view>
 					</view>
 				</view>
 			</view>

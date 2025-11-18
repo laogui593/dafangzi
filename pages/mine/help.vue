@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.help.title')" bgColor="#21212b" placeholder leftIconColor="#fff" leftIconSize="20px" titleStyle="color:#fff" :autoBack="true"></u-navbar>
+		<u-navbar title="帮助" bgColor="#21212b" placeholder leftIconColor="#fff" leftIconSize="20px" titleStyle="color:#fff" :autoBack="true"></u-navbar>
 		<view class="help-content">
-			{{$t('language.help.dec')}}
+			如有任何问题，请联系客服
 		</view>
 	</view>
 </template>

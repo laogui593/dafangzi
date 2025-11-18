@@ -1,15 +1,15 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.bill.title')" bgColor="#181f2f" placeholder leftIconColor="#fff" leftIconSize="20px"
+		<u-navbar title="账单" bgColor="#181f2f" placeholder leftIconColor="#fff" leftIconSize="20px"
 			titleStyle="color:#fff" :autoBack="true"></u-navbar>
 		<view class="bill" v-for="(item,index) in fundList" :key="item.id">
-			<view class="u-line-1 bill-padding"><text>{{$t('language.bill.time')}}：</text><text>{{item.time}}</text></view>
-			<view class="u-line-1 bill-padding"><text>{{$t('language.bill.note')}}：</text><text>{{item.reason}}</text></view>
+			<view class="u-line-1 bill-padding"><text>时间：</text><text>{{item.time}}</text></view>
+			<view class="u-line-1 bill-padding"><text>备注：</text><text>{{item.reason}}</text></view>
 			<view class="u-line-1 bill-padding">
-				<text>{{$t('language.bill.money')}}：</text>
+				<text>金额：</text>
 				<text v-if="item.type == 1">+</text>
 				<text v-if="item.type == 2">-</text>
-				<text>{{$t('language.order_time.symbol')}}{{item.money}}</text>
+				<text>¥{{item.money}}</text>
 			</view>
 		</view>
 	</view>

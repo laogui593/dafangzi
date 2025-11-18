@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :title="this.$t('language.bank_card.Bank_card_management')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="银行卡管理" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f">
 		</u-navbar>
 		<view class="f_content">
@@ -18,8 +18,8 @@
 				</view>
 			</view>
 			<view class="sure">
-				<button @click="goAddBank">{{$t('language.bank_card.Bind_bank_card')}}</button>
-				<button @click="openKF(KF)">{{$t('language.bank_card.Modify_contact_customer_service')}}</button>
+				<button @click="goAddBank">绑定银行卡</button>
+				<button @click="openKF(KF)">修改请联系客服</button>
 			</view>
 		</view>
 	</view>

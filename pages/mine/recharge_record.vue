@@ -1,37 +1,37 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.cash_record.title')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="充值记录" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="t_box_accountrecord">
 			<view class="t_ul" v-for="(item,index) in rechargeList" :key="index">
 				<view class="t_li">
-					<text>{{$t('language.cash_record.time')}}：</text>
+					<text>时间：</text>
 					<view class="">
 						{{item.time}}
 					</view>
 				</view>
 				<view class="t_li">
-					<text>{{$t('language.cash_record.money')}}：</text>
+					<text>金额：</text>
 					<view class="">
-						{{$t('language.order_time.symbol')}}{{item.money}}
+						¥{{item.money}}
 					</view>
 				</view>
 				<view class="t_li">
-					<text>{{$t('language.cash_record.type')}}：</text>
+					<text>类型：</text>
 					<view class="">
 						{{item.type}}
 					</view>
 				</view>
 				<view class="t_li">
-					<text>{{$t('language.cash_record.state')}}：</text>
+					<text>状态：</text>
 					<view class="orange" v-if="item.status == 0">
-						{{$t('language.cash_record.ing')}}
+						审核中
 					</view>
 					<view class="green" v-if="item.status == 1">
-						{{$t('language.cash_record.suc')}}
+						成功
 					</view>
 					<view class="red" v-if="item.status == 2">
-						{{$t('language.cash_record.fail')}}
+						失败
 					</view>
 				</view>
 			</view>

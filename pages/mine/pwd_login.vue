@@ -1,30 +1,30 @@
 <template>
 	<view>
-		<u-navbar :title="this.$t('language.pwd_login.Change_login_password')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="修改登录密码" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="f_content">
 			<view class="ul">
 				<view class="li">
-					<label>{{$t('language.pwd_login.old_password')}}</label>
+					<label>旧密码</label>
 					<view class="input-box">
-						<input type="password" v-model="form.oldpwd" :placeholder="this.$t('language.pwd_login.Enter_the_original_password')" />
+						<input type="password" v-model="form.oldpwd" placeholder="请输入原密码" />
 					</view>
 				</view>
 				<view class="li">
-					<label>{{$t('language.pwd_login.New_Password')}}</label>
+					<label>新密码</label>
 					<view class="input-box">
-						<input type="password" v-model="form.pwd" :placeholder="this.$t('language.pwd_login.Enter_a_new_password')" />
+						<input type="password" v-model="form.pwd" placeholder="请输入新密码" />
 					</view>
 				</view>
 				<view class="li">
-					<label>{{$t('language.pwd_login.Confirm_Password')}}</label>
+					<label>确认密码</label>
 					<view class="input-box">
-						<input type="password" v-model="form.pwd2" :placeholder="this.$t('language.pwd_login.input_confirmation')" />
+						<input type="password" v-model="form.pwd2" placeholder="请输入确认密码" />
 					</view>
 				</view>
 			</view>
 			<view class="sure">
-				<button @click="postPwdLogin">{{$t('language.pwd_login.sure')}}</button>
+				<button @click="postPwdLogin">确定</button>
 			</view>
 		</view>
 	</view>

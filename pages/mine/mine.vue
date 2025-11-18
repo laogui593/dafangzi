@@ -65,7 +65,7 @@
 							<navigator url="/pages/mine/set_account" class="nav">
 								<image src="/static/images/my1.png" mode=""></image>
 								<view class="">
-									{{$t('language.mine.change_Password')}}
+									修改密码
 								</view>
 							</navigator>
 						</view>
@@ -73,7 +73,7 @@
 							<navigator url="" class="nav" @click="openKF(KF)">
 								<image src="/static/images/my2.png" mode=""></image>
 								<view class="">
-									{{$t('language.mine.online_service')}}
+									在线客服
 								</view>
 							</navigator>
 						</view>
@@ -81,7 +81,7 @@
 							<navigator url="/pages/mine/add_bank_card" class="nav">
 								<image src="/static/images/my5.png" mode=""></image>
 								<view class="">
-									{{$t('language.mine.add_bank_card')}}
+									添加银行卡
 								</view>
 							</navigator>
 						</view>
@@ -89,7 +89,7 @@
 							<navigator url="/pages/mine/bank_card_list" class="nav">
 								<image src="/static/images/my6.png" mode=""></image>
 								<view class="">
-									{{$t('language.mine.Bank_card_list')}}
+									银行卡列表
 								</view>
 							</navigator>
 						</view>
@@ -97,7 +97,7 @@
 							<navigator url="" class="nav" @click="signOut">
 								<image src="/static/images/my4.png" mode=""></image>
 								<view class="">
-									{{$t('language.mine.sign_out')}}
+									退出登录
 								</view>
 							</navigator>
 						</view>

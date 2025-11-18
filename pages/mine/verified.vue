@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :title="this.$t('language.verified.Verified')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="实名认证" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="f_content">
 			<view class="f_content-box">
@@ -12,12 +12,12 @@
 			</view>
 			<view class="f_ul">
 				<view class="f_li">
-					<label>{{$t('language.verified.name')}}</label>
+					<label>姓名</label>
 					<input v-if="verifiedInfo.rz_status == 0" type="text" v-model="form.name">
 					<text v-else>{{verifiedInfo.name}}</text>
 				</view>
 				<view class="f_li">
-					<label>{{$t('language.verified.ID_number')}}</label>
+					<label>身份证号</label>
 					<input v-if="verifiedInfo.rz_status == 0" type="text" v-model="form.idcard">
 					<text v-else>{{verifiedInfo.idcard}}</text>
 				</view>
@@ -35,7 +35,7 @@
 				</view>
 			</view>
 			<view class="sure" v-if="verifiedInfo.rz_status == 0">
-				<button @click="submit">{{$t('language.verified.sure')}}</button>
+				<button @click="submit">确定</button>
 			</view>
 		</view>
 	</view>

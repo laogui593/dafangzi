@@ -26,11 +26,11 @@
 			if (op.id) {
 				this.id = op.id;
 				if (op.id == 1) {
-					this.title = this.$t('language.msg_view.Privacy_Policy');
+					this.title = '隐私政策';
 					console.log(this.title);
 					this.getPrivacyPolicy()
 				} else if (op.id == 2) {
-					this.title = this.$t('language.msg_view.about_Us');
+					this.title = '关于我们';
 					console.log(this.title);
 					this.getAboutUs()
 				}

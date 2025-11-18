@@ -17,31 +17,31 @@
 		</view>
 		<view class="sgin-in">
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.login.account')}}</label>
-				<input type="text" v-model="form.phone" :placeholder="$t('language.login.accounthint_empty')" />
+				<label class="input-title">账号</label>
+				<input type="text" v-model="form.phone" placeholder="请输入账号" />
 			</view>
 			<view class="m-flex input-box">
-				<label class="input-title">{{$t('language.login.password')}}</label>
-				<input type="password" v-model="form.password" :placeholder="$t('language.login.pwdhint_empty')" />
+				<label class="input-title">密码</label>
+				<input type="password" v-model="form.password" placeholder="请输入密码" />
 			</view>
 			<view class="btn">
-				<button @click="sginIn">{{$t('language.login.login')}}</button>
+				<button @click="sginIn">登录</button>
 			</view>
 			<view class="reg">
-				<text>{{$t('language.login.toRegQes')}}</text>
-				<text class="color-yellow" @click="sginUP">{{$t('language.login.toReg')}}</text>
+				<text>还没有账号?</text>
+				<text class="color-yellow" @click="sginUP">立即注册</text>
 			</view>
 			<view class="reg">
-				<text>{{$t('language.login.online')}}：</text>
+				<text>在线人数：</text>
 				<text class="color-red">{{randomMath}}</text>
-				<text>{{$t('language.login.people')}}</text>
+				<text>人</text>
 			</view>
 			<view class="m-flex m-row-between">
 				<view @click="forget">
-					{{$t('language.login.forgetPwd')}}
+					忘记密码
 				</view>
 				<view @click="openKF(KF)">
-					{{$t('language.login.custom')}}
+					联系客服
 				</view>
 			</view>
 		</view>
@@ -143,8 +143,8 @@
 					phone,
 					password
 				} = this.form;
-				if (!phone) return uni.$u.toast(this.$t('language.login.Please_input_Username'))
-				if (!password) return uni.$u.toast(this.$t('language.login.please_enter_password'))
+				if (!phone) return uni.$u.toast('请输入用户名')
+				if (!password) return uni.$u.toast('请输入密码')
 				
 				// 防止重复提交
 				if (this.loading) return;
@@ -169,10 +169,10 @@
 					this.loading = false;
 					
 					if (res.code == 1) {
-						// 保存uid
-						uni.setStorageSync('uid', res.data.id)
-						uni.showToast({
-							title: this.$t('language.login.Landed_successfully'),
+					// 保存uid
+					uni.setStorageSync('uid', res.data.id)
+					uni.showToast({
+						title: '登录成功',
 							icon: 'success',
 							duration: 2000,
 							success: () => {
@@ -196,12 +196,12 @@
 					this.loading = false;
 				})
 			},
-			// 忘记密码
-			forget() {
-				uni.showModal({
-					title: this.$t('language.login.hint'),
-					content: this.$t('language.login.Contact_Customer_Service'),
-					confirmText:this.$t('language.login.sure'),
+		// 忘记密码
+		forget() {
+			uni.showModal({
+				title: '提示',
+				content: '请联系客服',
+				confirmText:'确定',
 					showCancel: false,
 					success: res => {},
 					fail: () => {},

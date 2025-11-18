@@ -1,22 +1,22 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.set_account.account_security')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="账户安全" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="f_content">
 			<view class="list">
 				<view class="item">
-					<text>{{$t('language.set_account.username')}}</text>
+					<text>用户名</text>
 					<text>{{userInfo.name}}</text>
 				</view>
 				<view class="item">
 					<navigator url="/pages/mine/pwd_login" class="nav">
-						<text>{{$t('language.set_account.Change_login_password')}}</text>
+						<text>修改登录密码</text>
 						<!-- <u-icon name="arrow-right" color="#fff" size="28"></u-icon> -->
 					</navigator>
 				</view>
 				<view class="item">
 					<navigator url="/pages/mine/pwd_pay" class="nav">
-						<text>{{$t('language.set_account.Modify_payment_password')}}</text>
+						<text>修改支付密码</text>
 						<!-- <u-icon name="arrow-right" color="#fff" size="28"></u-icon> -->
 					</navigator>
 				</view>

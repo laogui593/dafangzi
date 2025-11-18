@@ -1,27 +1,27 @@
 <template>
 	<view>
-		<u-navbar :title="$t('language.recharge.title')" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
+		<u-navbar title="充值" :titleStyle="{ color: '#fff' }" leftIconColor="#fff" leftIconSize="40" :autoBack="true"
 			bgColor="#181f2f"></u-navbar>
 		<view class="t_con_pay">
 			<view class="t_money">
 				<i class="icon"></i>
-				<label class="lab">{{$t('language.recharge.tip')}}</label>
+				<label class="lab">请联系客服充值</label>
 			</view>
 			<view class="payment">
 				<view class="p_ul">
 					<view class="p_li repeat_active">
 						<i class="p_i"></i>
-						<view>{{$t('language.recharge.kefu')}}</view>
+						<view>客服</view>
 						<i class="p_i"></i>
 					</view>
 					<view class="p_li repeat_active">
 						<i class="p_i"></i>
-						<view>{{$t('language.recharge.web_kefu')}}</view>
+						<view>网站客服</view>
 						<i class="p_i"></i>
 					</view>
 					<view class="p_li repeat_active">
 						<i class="p_i"></i>
-						<view @click="copy(user.phone)">{{$t('language.recharge.account')}}�?
+						<view @click="copy(user.phone)">收款账号：
 							<view class="card">
 								{{user.phone}}
 							</view>
@@ -30,7 +30,7 @@
 					</view>
 					<view class="p_li repeat_active">
 						<i class="p_i"></i>
-						<view @click="copy(user.name)">{{$t('language.recharge.name')}}�?
+						<view @click="copy(user.name)">收款姓名：
 							<view class="card">
 								{{user.name}}
 							</view>
@@ -41,26 +41,26 @@
 			</view>
 			<view class="t_money">
 				<i class="icon"></i>
-				<label class="lab">{{$t('language.recharge.tip2')}}</label>
+				<label class="lab">提示：请填写转账信息</label>
 			</view>
 			<view class="payment othermon">
 				<view class="p_ul">
 					<view class="p_li repeat_active">
-						<text :decode="true" class="p_text">{{$t('language.recharge.money')}}�?&nbsp;</text>
+						<text :decode="true" class="p_text">充值金额：&nbsp;</text>
 						<input type="text" v-model="form.money" class="p_input">
 					</view>
 					<view class="p_li repeat_active">
-						<text :decode="true" class="p_text">{{$t('language.recharge.name2')}}�?&nbsp;</text>
+						<text :decode="true" class="p_text">真实姓名：&nbsp;</text>
 						<input type="text" v-model="form.truename" class="p_input">
 					</view>
 					<view class="p_li repeat_active">
-						<text :decode="true" class="p_text">{{$t('language.recharge.exchage')}}�?&nbsp;</text>
+						<text :decode="true" class="p_text">汇款凭证：&nbsp;</text>
 						<input type="text" v-model="form.reason" class="p_input">
 					</view>
 				</view>
 			</view>
 			<view class="t_pay_btn">
-				<button @click="recharges">{{$t('language.recharge.btn')}}</button>
+				<button @click="recharges">提交</button>
 			</view>
 		</view>
 	</view>
@@ -115,7 +115,7 @@
 					}
 				});
 			},
-			// 充�?
+			// 充�?
 			recharges() {
 				recharges(this.form).then((res) => {
 					console.log('res: ', res)
